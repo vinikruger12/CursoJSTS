@@ -1,8 +1,9 @@
-import GeraCPF from './assets/modules/GeraCPF';
+import GeraCPF from './modules/GeraCPF';
+
 import './assets/css/style.css';
 
-(function(){
-    const gera = new GeraCPF();
-    const cpfGerado = document.querySelector('.cpf-gerado');
-    cpfGerado.innerHTML = gera.geraNovoCpf();
-});
+(function() {
+  const gera = new GeraCPF();
+  const cpfGerado = document.querySelector('.cpf-gerado');
+  cpfGerado.innerHTML = gera.geraNovoCpf();
+})();
