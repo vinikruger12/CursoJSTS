@@ -1,13 +1,13 @@
-import Aluno from '../models/Aluno';
-import Foto from '../models/Foto';
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _Aluno = require('../models/Aluno'); var _Aluno2 = _interopRequireDefault(_Aluno);
+var _Foto = require('../models/Foto'); var _Foto2 = _interopRequireDefault(_Foto);
 
 class AlunoController{
   async index(req, res){
-    const alunos = await Aluno.findAll({
+    const alunos = await _Aluno2.default.findAll({
       attributes: ['id', 'nome', 'sobrenome', 'email', 'idade', 'peso', 'altura'],
-      order: [['id', 'DESC'], [Foto, 'id', 'DESC']],
+      order: [['id', 'DESC'], [_Foto2.default, 'id', 'DESC']],
       include: {
-        model: Foto,
+        model: _Foto2.default,
         attributes: ['url', 'filename'],
       },
     });
@@ -22,11 +22,11 @@ class AlunoController{
         errors: ['Missing ID'],
       });
 
-      const aluno = await Aluno.findByPk(id, {
+      const aluno = await _Aluno2.default.findByPk(id, {
       attributes: ['id', 'nome', 'sobrenome', 'email', 'idade', 'peso', 'altura'],
-      order: [['id', 'DESC'], [Foto, 'id', 'DESC']],
+      order: [['id', 'DESC'], [_Foto2.default, 'id', 'DESC']],
       include: {
-        model: Foto,
+        model: _Foto2.default,
         attributes: ['url', 'filename'],
       },
     });
@@ -54,7 +54,7 @@ class AlunoController{
         errors: ['Missing ID'],
       });
 
-      const aluno = await Aluno.findByPk(id);
+      const aluno = await _Aluno2.default.findByPk(id);
 
       if(!aluno) return res.status(400).json({
         errors: ['Missing "Aluno"'],
@@ -81,7 +81,7 @@ class AlunoController{
         errors: ['Missing ID'],
       });
 
-      const aluno = await Aluno.findByPk(id);
+      const aluno = await _Aluno2.default.findByPk(id);
 
       if(!aluno) return res.status(400).json({
         errors: ['Missing "Aluno"'],
@@ -100,7 +100,7 @@ class AlunoController{
 
   async store(req, res){
     try{
-      const aluno = await Aluno.create(req.body);
+      const aluno = await _Aluno2.default.create(req.body);
       res.json(aluno);
 
     }
@@ -113,4 +113,4 @@ class AlunoController{
   }
 }
 
-export default new AlunoController();
+exports. default = new AlunoController();

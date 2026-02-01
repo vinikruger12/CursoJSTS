@@ -1,12 +1,12 @@
-import { Model, DataTypes } from 'sequelize';
-import Foto from '../models/Foto';
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _sequelize = require('sequelize');
+var _Foto = require('../models/Foto'); var _Foto2 = _interopRequireDefault(_Foto);
 
-export default class Aluno extends Model {
+ class Aluno extends _sequelize.Model {
   static init(sequelize) {
     super.init(
       {
         nome: {
-          type: DataTypes.STRING,
+          type: _sequelize.DataTypes.STRING,
           defaultValue: '',
           validate: {
             len: {
@@ -16,7 +16,7 @@ export default class Aluno extends Model {
           }
         },
         sobrenome: {
-          type: DataTypes.STRING,
+          type: _sequelize.DataTypes.STRING,
           defaultValue: '',
           validate: {
             len: {
@@ -26,7 +26,7 @@ export default class Aluno extends Model {
           }
         },
         email: {
-          type: DataTypes.STRING,
+          type: _sequelize.DataTypes.STRING,
           defaultValue: '',
           unique: {
             msg: "Email ja existe",
@@ -38,7 +38,7 @@ export default class Aluno extends Model {
           }
         },
         idade:{
-          type: DataTypes.INTEGER,
+          type: _sequelize.DataTypes.INTEGER,
           defaultValue: '',
           validate: {
             isInt: {
@@ -47,7 +47,7 @@ export default class Aluno extends Model {
           }
         },
         peso: {
-          type: DataTypes.FLOAT,
+          type: _sequelize.DataTypes.FLOAT,
           defaultValue: '',
           validate: {
             isFloat: {
@@ -56,7 +56,7 @@ export default class Aluno extends Model {
           }
         },
         altura: {
-          type: DataTypes.FLOAT,
+          type: _sequelize.DataTypes.FLOAT,
           defaultValue: '',
           validate: {
             isFloat: {
@@ -79,4 +79,4 @@ export default class Aluno extends Model {
     this.hasMany(models.Foto, { foreignKey: 'aluno_id' });
   }
 
-}
+} exports.default = Aluno;
