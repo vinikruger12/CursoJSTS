@@ -12,6 +12,7 @@ var _alunoRoutes = require('./routes/alunoRoutes'); var _alunoRoutes2 = _interop
 var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopRequireDefault(_fotoRoutes);
 
 
+
 class App {
   constructor(){
     this.app = _express2.default.call(void 0, );
@@ -20,6 +21,7 @@ class App {
   }
 
   middlewares(){
+
     this.app.use(_express2.default.urlencoded({extended:true}));
     this.app.use(_express2.default.json());
     this.app.use(_express2.default.static(_path.resolve.call(void 0, __dirname, 'uploads')));
