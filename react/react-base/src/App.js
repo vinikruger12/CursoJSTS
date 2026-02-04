@@ -2,6 +2,7 @@ import React from "react";
 
 import Login from "./pages/Login";
 import GlobalStyle from "./styles/GlobalStyles";
+import { ToastContainer } from "react-toastify";
 
 import history from "./services/history";
 
@@ -13,6 +14,7 @@ import Routes from "./routes";
 function App() {
   return (
     <Router history={history}>
+      <ToastContainer autoClose={3000} className="toast-container" />
       <Header />
       <Routes/>
       <GlobalStyle />
