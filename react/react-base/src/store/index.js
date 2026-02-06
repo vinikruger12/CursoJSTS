@@ -1,10 +1,6 @@
 import { createStore } from "react-redux";
+import rootReducer from "./modules/rootReducer";
 
-
-const reducer = (state, action) =>{
-    return state;
-};
-
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 export default store;
