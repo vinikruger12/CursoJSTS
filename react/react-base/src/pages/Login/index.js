@@ -13,20 +13,11 @@ export default function Login() {
 
     const dispatch = useDispatch();
 
-    React.useEffect(() => {
-        async function getData(){
-            const response = await axios.get('/alunos');
-            const { data } = response;
-            console.log(data);
-        }
-
-        getData()
-    }, []);
 
     function handleClick(e){
         e.preventDefault();
 
-        dispatch(exampleActions.ClicaBotao());
+        dispatch(exampleActions.ClicaBotaoRequest());
     }
 
     return(
