@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack -w"
+    "build:frontend": "webpack -w",
+    "build:backend": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -13,10 +14,14 @@
   "type": "commonjs",
   "devDependencies": {
     "eslint": "^10.0.0",
+    "@types/validator": "^13.15.10",
     "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
     "webpack": "^5.105.1",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "validator": "^13.15.26"
   }
 }
