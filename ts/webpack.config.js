@@ -2,7 +2,7 @@
 
   module.exports = {
     mode: 'development',
-    entry: './src/A0020-exercicio/index.ts',
+    entry: './src/tipos-basicos/A0020-exercicio/index.ts',
     devtool: 'inline-source-map',
     module: {
       rules: [
