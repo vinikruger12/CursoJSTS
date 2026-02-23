@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(88, 160, 136);
+  transition: background-color 300ms ease-in-out;
+  line-height: 1.5;
+}
+
+.container{
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.working{
+  background-color: rgb(107, 44, 44);
+}
+
+.hidden{
+  display: none;
+}
+
+.pomodoro {
+  background-color: #fff;
+  margin: 50px 20px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.pomodoro h2{
+  font-size: 24px;
+  text-align: center;
+}
+
+.pomodoro .timer{
+  font-size: 6rem;
+  text-align: center;
+}
+
+.pomodoro button{
+  background-color: rgb(88, 160, 136);
+  border: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  color: black;
+  transition: background-color 300ms ease-in-out;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+.pomodoro .controls{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.working .pomodoro button{
+  background-color: rgb(107, 44, 44);
+  border: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  color: white;
+  transition: background-color 300ms ease-in-out;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+.pomodoro .details{
+  margin:  20px 0;
+}
